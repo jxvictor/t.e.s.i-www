@@ -24,9 +24,17 @@ if (ehVerdadeiro) {
     //alert('é falso');
 }
 
-let valores = [10, 20, 50, 80];
+let valores = [800, 90, 20, 50, 80, 200, 1, 2, 400, 1000];
 
-//console.log(valores)
+//console.log(valores);
+
+/*detalhe: para inteiro, tem que colocar parametro definindo se quer crescente ou
+descrescente*/
+let ordenado = valores.sort((a, b) => a-b);
+////console.log(ordenado);
+
+let pessoas = ['zowie', 'chico', 'fabio', 'francisco', 'alan', 'ana', 'jose'];
+//console.log(pessoas.sort());
 
 let maioresQue20 = valores.filter(n => n > 20);
 
@@ -61,4 +69,29 @@ let contatoEncontrado = usuario.contatos.find(c => c.tipo === 'telefone');
 // == compara valores, independentemente do tipo.
 // === compara valor e tipo.
 let valor = (1 === '1');
-console.log(valor);
+//console.log(valor);
+
+function exibir(){
+    //console.log("teste de função");
+}
+
+//exibir();
+
+function somaNumeros(n1, n2){
+    return n1 + n2;
+}
+
+//console.log(somaNumeros(10, 2));
+
+function teste() {
+    var global = 'inicio';
+    let interno = 'inicio interno';
+    if(true){
+        global = 'teste';
+    }
+
+    console.log(global);
+    console.log(interno);
+}
+
+teste();
